@@ -455,31 +455,67 @@ function renderTokens() {
 //  QUESTIONS
 // ============================================================
 const ALL_QUESTIONS = [
-  { prompt: "In operant conditioning, what is the term for a consequence that increases the likelihood of a behavior occurring again?", options: ["Extinction", "Reinforcement", "Habituation", "Punishment"], correct: 1, difficulty: "easy" },
-  { prompt: "What is positive punishment?", options: ["Removing a pleasant stimulus to decrease behavior", "Presenting an unpleasant stimulus to decrease behavior", "Adding a pleasant stimulus to increase behavior", "Removing an unpleasant stimulus to increase behavior"], correct: 1, difficulty: "easy" },
-  { prompt: "What is negative punishment?", options: ["Adding an aversive stimulus after a response", "Removing a positive stimulus after a response to decrease that response", "Ignoring a behavior entirely", "Presenting a neutral stimulus"], correct: 1, difficulty: "easy" },
-  { prompt: "According to lecture, punishment is most effective when it is:", options: ["Delayed, mild, and occasional", "Swift, sufficient, and consistent", "Surprising and unpredictable", "Paired only with food rewards"], correct: 1, difficulty: "easy" },
-  { prompt: "In Pavlovian conditioning, the conditioned stimulus (CS) is:", options: ["A stimulus that naturally triggers a response", "A neutral stimulus that has been paired with a meaningful event", "The reward given after an operant response", "The behavior a subject performs for food"], correct: 1, difficulty: "easy" },
-  { prompt: "What is shaping in operant conditioning?", options: ["Punishing all incorrect behaviors at once", "Reinforcing successive approximations toward a target behavior", "Ignoring behavior until it disappears", "Pairing two unrelated stimuli together"], correct: 1, difficulty: "easy" },
-  { prompt: "Delay discounting refers to which phenomenon?", options: ["Future rewards become more desirable the longer you wait", "The subjective value of a reward decreases as the delay to receiving it increases", "Punishment becomes weaker when it is delayed", "Extinction is more rapid with longer inter-trial intervals"], correct: 1, difficulty: "easy" },
-  { prompt: "In Skinner's experiment on positive punishment, paw-slapped rats during extinction:", options: ["Stopped pressing the lever much faster than unpunished rats", "Showed similar total lever presses to unpunished rats, suggesting punishment was ineffective", "Pressed the lever more due to frustration", "Never pressed the lever again after the first slap"], correct: 1, difficulty: "easy" },
-  { prompt: "Pavlovian extinction involves:", options: ["Presenting the US without the CS", "Presenting the CS without the US until the CR decreases", "Strengthening the CR by increasing CS intensity", "Pairing the CS with a new, stronger US"], correct: 1, difficulty: "medium" },
-  { prompt: "According to the conditioned suppression account of punishment, punishment reduces behavior because:", options: ["It directly erases the S-R association", "It creates an emotional/fear response that interferes with ongoing behavior", "It permanently destroys the memory trace", "It increases motivation to seek alternative rewards"], correct: 1, difficulty: "medium" },
-  { prompt: "Why did the child's self-injurious behavior return when a different therapist entered the room?", options: ["The punishment had fully erased the behavior", "The behavior was suppressed only near the therapist who delivered punishment — that therapist became an Sᴰ", "The child forgot the rule", "The new therapist accidentally reinforced the behavior"], correct: 1, difficulty: "medium" },
-  { prompt: "A key criticism of punishment as a behavior-change strategy is that:", options: ["It is impossible to apply consistently", "It tells the organism what not to do but does not teach what behavior is acceptable", "It only works for Pavlovian behaviors", "It can only suppress food-related behaviors"], correct: 1, difficulty: "medium" },
-  { prompt: "Spontaneous recovery in Pavlovian conditioning demonstrates that:", options: ["Extinction permanently destroys the original CS-US association", "After extinction and a rest period, the CR can re-emerge, showing original learning was not erased", "Reinforcement always overpowers extinction", "Habituation and extinction are the same process"], correct: 1, difficulty: "medium" },
-  { prompt: "Renewal of an extinguished response occurs when:", options: ["The US is presented alone after extinction", "The organism is tested in a context different from where extinction took place", "The CS intensity is increased", "A new operant response is reinforced"], correct: 1, difficulty: "medium" },
-  { prompt: "Reinstatement refers to:", options: ["The return of an extinguished CR following an unexpected presentation of the US", "Faster reacquisition of behavior after re-training", "Spontaneous recovery during a rest period", "Context-specific punishment suppression"], correct: 0, difficulty: "medium" },
-  { prompt: "The Premack Principle states that:", options: ["Any stimulus can serve as a reinforcer if presented after a response", "High-probability behaviors can be used to reinforce low-probability behaviors", "Punishment is always more effective than reinforcement", "Extinction permanently weakens all responses"], correct: 1, difficulty: "medium" },
-  { prompt: "In the case study from lecture, the 8-year-old's self-injury stopped by the 8th extinction session because:", options: ["Punishment via shocks was applied", "The behavior had been maintained by attention; removing attention eventually eliminated it", "The child was medicated", "The therapist used overcorrection"], correct: 1, difficulty: "medium" },
-  { prompt: "In the Camp, Raymond, and Church (1967) study on punishment timing:", options: ["Delay of punishment had no effect", "Immediate punishment produced more suppression, and more intense punishment produced more suppression", "Only mild punishment was effective", "Delayed punishment was more effective because it allowed anticipation"], correct: 1, difficulty: "medium" },
-  { prompt: "In Rescorla's contingency framework, conditioned inhibition occurs when:", options: ["P(US|CS) > P(US|noCS)", "P(US|CS) = P(US|noCS)", "P(US|CS) < P(US|noCS)", "The CS always immediately precedes the US"], correct: 2, difficulty: "hard" },
-  { prompt: "The blocking effect (Kamin) demonstrates that:", options: ["Simple temporal contiguity between CS and US is sufficient", "A CS only acquires strength if it adds new predictive information about the US", "All stimuli present during conditioning gain equal strength", "Motor fatigue prevents responding"], correct: 1, difficulty: "hard" },
-  { prompt: "Outcome devaluation tests whether behavior is goal-directed because:", options: ["Habitual behavior persists even if the outcome is devalued, while goal-directed behavior decreases", "Goal-directed behavior never changes after training", "Habits are always stronger than goal-directed responses", "Devaluation works only on Pavlovian behaviors"], correct: 0, difficulty: "hard" },
-  { prompt: "According to the negative law of effect (lecture theories of punishment):", options: ["Punishment creates an emotional state that indirectly suppresses behavior", "Punishment is the mirror image of reinforcement — it weakens S-R associations as reinforcement strengthens them", "Punishment only works combined with positive reinforcement", "Negative consequences have no lasting effect on association strength"], correct: 1, difficulty: "hard" },
-  { prompt: "A child misbehaves only when a particular parent is absent. This best illustrates:", options: ["Generalization of punishment", "The parent becoming an S-delta (discriminative stimulus signaling punishment will NOT occur)", "Positive punishment losing effectiveness over time", "Extinction of punishment-related fear"], correct: 1, difficulty: "hard" },
-  { prompt: "'Use of punishment may be reinforced' means:", options: ["The person receiving punishment enjoys it", "If punishment suppresses maladaptive behavior, administering it is negatively reinforced, potentially leading to overuse", "Reinforcement always follows punishment", "The punished organism reinforces the punisher"], correct: 1, difficulty: "hard" },
-  { prompt: "Outcome-mediated transfer shows that:", options: ["Organisms do not encode outcome identity", "S-R theory fully explains operant learning", "Shared outcome identity can transfer responding across stimuli and responses", "Extinction is not context-specific"], correct: 2, difficulty: "hard" },
+  // ---------- UNIT 1 ----------
+  { prompt: "What is Pavlovian conditioning?", options: ["Passive association between stimuli","Trial-and-error learning","Learning through rewards","Motor learning"], correct: 0, difficulty: "easy" },
+  { prompt: "What is the purpose of T2?", options: ["Reinforcement","Punishment","Testing learning","Training"], correct: 2, difficulty: "easy" },
+  { prompt: "Dishabituation is:", options: ["Loss of response","Return of response after habituation","Reinforcement","Extinction"], correct: 1, difficulty: "easy" },
+  { prompt: "Sensitization leads to:", options: ["Decreased response","No change","Memory loss","Increased response"], correct: 3, difficulty: "easy" },
+  { prompt: "Short ISI usually causes:", options: ["Slower habituation","Faster habituation","No learning","Extinction"], correct: 1, difficulty: "easy" },
+
+  { prompt: "Why is a common test at T2 needed?", options: ["Increase trials","Control confounds","Reinforce behavior","Reduce variability"], correct: 1, difficulty: "medium" },
+  { prompt: "Drug tolerance depends on:", options: ["Time only","Intensity","Genetics only","Context"], correct: 3, difficulty: "medium" },
+  { prompt: "Dual Process Theory includes:", options: ["Memory + reward","Habituation + sensitization","S-R + R-O","Reinforcement + punishment"], correct: 1, difficulty: "medium" },
+  { prompt: "Which is a non-learning explanation?", options: ["Conditioning","Association","Sensory adaptation","Reinforcement"], correct: 2, difficulty: "medium" },
+  { prompt: "Gradual exposure helps habituation because:", options: ["It increases intensity","It allows progressive adjustment","It removes stimuli","It prevents learning"], correct: 1, difficulty: "medium" },
+
+  { prompt: "A subject stops responding to a repeated tone but responds again when a new light is introduced. This is:", options: ["Extinction","Reinforcement","Dishabituation","Fatigue"], correct: 2, difficulty: "hard" },
+  { prompt: "A subject shows habituation in one room but not another. This suggests:", options: ["No learning","Stimulus is weak","Sensitization","Context matters"], correct: 3, difficulty: "hard" },
+  { prompt: "In Wagner’s model, a stimulus produces less response when:", options: ["It is new","It is strong","It is already in memory","It is random"], correct: 2, difficulty: "hard" },
+  { prompt: "Long ISI improves learning because:", options: ["It increases intensity","It reduces exposure","It prevents repetition","It allows better memory processing"], correct: 3, difficulty: "hard" },
+  { prompt: "If reduced responding is due to fatigue, then introducing a new stimulus will:", options: ["Increase responding","Have no effect","Decrease responding","Cause extinction"], correct: 1, difficulty: "hard" },
+  { prompt: "A researcher only measures behavior change within one group. The issue is:", options: ["Too many trials","Cannot isolate learning","No stimuli used","Too much variability"], correct: 1, difficulty: "hard" },
+  { prompt: "Strong stimuli leading to more habituation contradicts:", options: ["Early intensity theory","Wagner’s model","Pavlovian theory","Reinforcement theory"], correct: 0, difficulty: "hard" },
+  { prompt: "If a stimulus is expected, Wagner predicts:", options: ["Strong response","Weak or no response","No learning","Sensitization"], correct: 1, difficulty: "hard" },
+  { prompt: "Habituation being context-specific supports:", options: ["G&T only","S-R Theory","Reinforcement theory","Wagner’s model"], correct: 3, difficulty: "hard" },
+  { prompt: "Which condition is best for producing habituation?", options: ["Random exposure","Gradual increase in stimulus","No repetition","Strong stimulus"], correct: 1, difficulty: "hard" },
+
+  // ---------- UNIT 2 ----------
+  { prompt: "Law of Effect states:", options: ["Consequences shape behavior","Behavior is random","Learning is instant","No repetition"], correct: 0, difficulty: "easy" },
+  { prompt: "Positive reinforcement means:", options: ["Remove stimulus","Decrease behavior","Add stimulus to increase behavior","Punish behavior"], correct: 2, difficulty: "easy" },
+  { prompt: "Shaping involves:", options: ["Punishment","Ignoring behavior","Reinforcing steps toward behavior","Extinction"], correct: 2, difficulty: "easy" },
+  { prompt: "Escape learning is:", options: ["Ending an aversive stimulus","Avoiding stimulus","Reinforcing reward","Ignoring behavior"], correct: 0, difficulty: "easy" },
+  { prompt: "Overjustification effect leads to:", options: ["Increased motivation","No change","Decreased motivation","Faster learning"], correct: 2, difficulty: "easy" },
+
+  { prompt: "Secondary reinforcers work because:", options: ["They are paired with primary reinforcers","They are natural","They are intense","They are random"], correct: 0, difficulty: "medium" },
+  { prompt: "Outcome devaluation tests:", options: ["Memory","Reflexes","Goal-directed behavior","Sensory processing"], correct: 2, difficulty: "medium" },
+  { prompt: "Crespi’s experiment shows:", options: ["No change","Equal behavior","Emotional reaction to reward changes","No learning"], correct: 2, difficulty: "medium" },
+  { prompt: "Matching law predicts:", options: ["Equal behavior","Behavior matches reinforcement rates","Random behavior","No learning"], correct: 1, difficulty: "medium" },
+  { prompt: "Delay discounting explains:", options: ["Memory loss","Preference for delayed rewards","Preference for immediate rewards","No choice"], correct: 2, difficulty: "medium" },
+
+  { prompt: "A rat stops pressing a lever after food is paired with illness. This shows:", options: ["S-R learning","No learning","Goal-directed behavior","Extinction"], correct: 2, difficulty: "hard" },
+  { prompt: "A subject keeps responding even after reward loses value. This suggests:", options: ["Goal-directed","Reinforcement","Habit (S-R)","No learning"], correct: 2, difficulty: "hard" },
+  { prompt: "A stimulus increases a response linked to the same outcome. This is:", options: ["Extinction","Punishment","Outcome-mediated transfer","Habituation"], correct: 2, difficulty: "hard" },
+  { prompt: "A subject runs slower after reward is reduced. This is:", options: ["Elation","Reinforcement","Depression effect","Extinction"], correct: 2, difficulty: "hard" },
+  { prompt: "Under S-R theory, outcome devaluation should cause:", options: ["No change","Reduced responding","Increased responding","Extinction"], correct: 0, difficulty: "hard" },
+  { prompt: "Choosing a small immediate reward reflects:", options: ["Delay discounting","Matching law","Reinforcement","Extinction"], correct: 0, difficulty: "hard" },
+  { prompt: "Using a preferred activity to reinforce another is:", options: ["Punishment","Extinction","Premack Principle","Habituation"], correct: 2, difficulty: "hard" },
+  { prompt: "Rewarding an already enjoyable activity reduces motivation due to:", options: ["Reinforcement","Punishment","Overjustification","Extinction"], correct: 2, difficulty: "hard" },
+  { prompt: "Using a stimulus to guide which response leads to which outcome reflects:", options: ["Hierarchical learning","S-R","Reflex","No learning"], correct: 0, difficulty: "hard" },
+  { prompt: "Delayed reinforcement in shaping leads to:", options: ["Confusion about behavior","Faster learning","Stronger habit","No effect"], correct: 1, difficulty: "hard" },
+
+  // ---------- UNIT 3 ----------
+  { prompt: "Positive punishment:", options: ["Remove stimulus","Add unpleasant stimulus","Increase reward","Ignore behavior"], correct: 1, difficulty: "easy" },
+  { prompt: "Negative punishment:", options: ["Remove pleasant stimulus","Add stimulus","Reinforcement","Ignore behavior"], correct: 0, difficulty: "easy" },
+  { prompt: "Obsessions are:", options: ["Behaviors","Rewards","Intrusive thoughts","Stimuli"], correct: 2, difficulty: "easy" },
+
+  { prompt: "ERP therapy involves:", options: ["Exposure without compulsions","Avoidance","Reinforcement","Punishment"], correct: 0, difficulty: "medium" },
+  { prompt: "Effective punishment must be:", options: ["Delayed","Weak","Random","Immediate, strong, consistent"], correct: 3, difficulty: "medium" },
+  { prompt: "Punishment often works by:", options: ["Suppressing behavior","Teaching behavior","Reinforcing behavior","Erasing behavior"], correct: 0, difficulty: "medium" },
+
+  { prompt: "A child behaves only when a strict parent is present. This means:", options: ["Behavior is erased","No learning","Reinforcement","Parent is an Sd for punishment"], correct: 3, difficulty: "hard" },
+  { prompt: "In ERP, anxiety decreases after not performing a ritual because:", options: ["Punishment","Reinforcement of compulsion","Sensitization","Learning that feared outcome doesn’t occur"], correct: 3, difficulty: "hard" },
+  { prompt: "Avoidance behavior persists because:", options: ["Reward is given","Fear reduction reinforces behavior","No learning","Punishment"], correct: 1, difficulty: "hard" },
+  { prompt: "Behavior returns after punishment stops because:", options: ["It was erased","It was reinforced","It was suppressed, not unlearned","It was forgotten"], correct: 2, difficulty: "hard" }
 ];
 
 // ============================================================
