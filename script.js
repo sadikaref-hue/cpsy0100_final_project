@@ -207,7 +207,7 @@ function buildSVG() {
   //  Styled to match the purple/violet palette
   // ============================================================
 
-  // Helper to add a sulcus path
+  // // Helper to add a sulcus path
   const sulcus = (d, sw = '2', op = '0.6', dash = null, cap = 'round') => {
     const attrs = {
       d, fill: 'none', stroke: '#9d78f0',
@@ -217,61 +217,61 @@ function buildSVG() {
     gameSvg.appendChild(el('path', attrs));
   };
 
-  // Top frontal / parietal gyri — sweeping curves across the crown
-  sulcus('M 130,100 C 170,76 220,62 270,58 C 320,54 370,60 412,72', '2.5', '0.65');
-  sulcus('M 120,124 C 165,100 218,84 272,80 C 326,76 378,84 422,98', '2', '0.55');
-  sulcus('M 212,50 C 248,38 290,30 334,28 C 378,26 420,34 456,50', '2', '0.5');
-  sulcus('M 440,48 C 480,32 524,26 566,28 C 604,30 638,46 662,70', '2', '0.5');
-  sulcus('M 640,70 C 670,52 706,44 740,50 C 766,56 786,72 796,96', '2', '0.5');
+  // // Top frontal / parietal gyri — sweeping curves across the crown
+  // sulcus('M 130,100 C 170,76 220,62 270,58 C 320,54 370,60 412,72', '2.5', '0.65');
+  // sulcus('M 120,124 C 165,100 218,84 272,80 C 326,76 378,84 422,98', '2', '0.55');
+  // sulcus('M 212,50 C 248,38 290,30 334,28 C 378,26 420,34 456,50', '2', '0.5');
+  // sulcus('M 440,48 C 480,32 524,26 566,28 C 604,30 638,46 662,70', '2', '0.5');
+  // sulcus('M 640,70 C 670,52 706,44 740,50 C 766,56 786,72 796,96', '2', '0.5');
 
-  // Central sulcus divider (parietal/frontal boundary) — prominent
-  sulcus('M 446,48 C 440,90 436,150 434,200', '3', '0.55');
-  sulcus('M 478,42 C 474,86 470,148 468,200', '2', '0.45');
+  // // Central sulcus divider (parietal/frontal boundary) — prominent
+  // sulcus('M 446,48 C 440,90 436,150 434,200', '3', '0.55');
+  // sulcus('M 478,42 C 474,86 470,148 468,200', '2', '0.45');
 
-  // Between Row A and Row B (y ≈ 165–230) — horizontal gyri bands
-  sulcus('M 42,168 C 120,154 210,148 310,150 C 400,152 450,158 490,156 C 560,152 640,148 730,154 C 780,158 820,166 844,178', '2.5', '0.6');
-  sulcus('M 38,192 C 118,178 210,172 312,174 C 402,176 452,182 492,180 C 562,176 644,172 736,178 C 788,182 828,192 850,206', '2', '0.5');
-  sulcus('M 40,215 C 120,202 214,196 316,198 C 408,200 456,206 494,204 C 566,200 648,196 740,202 C 794,206 832,216 854,230', '1.8', '0.4');
+  // // Between Row A and Row B (y ≈ 165–230) — horizontal gyri bands
+  // sulcus('M 42,168 C 120,154 210,148 310,150 C 400,152 450,158 490,156 C 560,152 640,148 730,154 C 780,158 820,166 844,178', '2.5', '0.6');
+  // sulcus('M 38,192 C 118,178 210,172 312,174 C 402,176 452,182 492,180 C 562,176 644,172 736,178 C 788,182 828,192 850,206', '2', '0.5');
+  // sulcus('M 40,215 C 120,202 214,196 316,198 C 408,200 456,206 494,204 C 566,200 648,196 740,202 C 794,206 832,216 854,230', '1.8', '0.4');
 
-  // Vertical sulci between spaces in Row A (frontal lobe columns)
-  sulcus('M 258,112 C 255,140 253,168 252,194', '1.8', '0.5');
-  sulcus('M 372,122 C 370,148 368,174 367,198', '1.8', '0.5');
-  sulcus('M 490,110 C 490,138 490,166 490,192', '1.8', '0.5');
-  sulcus('M 604,116 C 604,144 604,170 604,196', '1.8', '0.5');
+  // // Vertical sulci between spaces in Row A (frontal lobe columns)
+  // sulcus('M 258,112 C 255,140 253,168 252,194', '1.8', '0.5');
+  // sulcus('M 372,122 C 370,148 368,174 367,198', '1.8', '0.5');
+  // sulcus('M 490,110 C 490,138 490,166 490,192', '1.8', '0.5');
+  // sulcus('M 604,116 C 604,144 604,170 604,196', '1.8', '0.5');
 
-  // Between Row B and Row C (y ≈ 330–390) — horizontal gyri bands
-  sulcus('M 36,335 C 118,322 210,316 314,318 C 406,320 456,326 494,324 C 566,320 650,316 742,322 C 796,326 836,336 858,350', '2.5', '0.6');
-  sulcus('M 34,360 C 118,346 212,340 316,342 C 408,344 458,350 496,348 C 570,344 654,340 746,346 C 800,350 840,360 860,374', '2', '0.5');
-  sulcus('M 36,382 C 120,370 216,364 318,366 C 412,368 460,374 498,372 C 572,368 656,364 748,370 C 804,374 842,384 862,398', '1.8', '0.4');
+  // // Between Row B and Row C (y ≈ 330–390) — horizontal gyri bands
+  // sulcus('M 36,335 C 118,322 210,316 314,318 C 406,320 456,326 494,324 C 566,320 650,316 742,322 C 796,326 836,336 858,350', '2.5', '0.6');
+  // sulcus('M 34,360 C 118,346 212,340 316,342 C 408,344 458,350 496,348 C 570,344 654,340 746,346 C 800,350 840,360 860,374', '2', '0.5');
+  // sulcus('M 36,382 C 120,370 216,364 318,366 C 412,368 460,374 498,372 C 572,368 656,364 748,370 C 804,374 842,384 862,398', '1.8', '0.4');
 
-  // Vertical sulci between spaces in Row B (parietal columns)
-  sulcus('M 258,275 C 255,302 252,330 250,357', '1.8', '0.5');
-  sulcus('M 372,284 C 370,310 368,338 366,364', '1.8', '0.5');
-  sulcus('M 490,278 C 490,306 490,334 490,362', '1.8', '0.5');
-  sulcus('M 604,288 C 604,314 604,342 604,368', '1.8', '0.5');
+  // // Vertical sulci between spaces in Row B (parietal columns)
+  // sulcus('M 258,275 C 255,302 252,330 250,357', '1.8', '0.5');
+  // sulcus('M 372,284 C 370,310 368,338 366,364', '1.8', '0.5');
+  // sulcus('M 490,278 C 490,306 490,334 490,362', '1.8', '0.5');
+  // sulcus('M 604,288 C 604,314 604,342 604,368', '1.8', '0.5');
 
-  // Occipital / temporal lobe bumps (right side)
-  sulcus('M 828,378 C 840,398 844,422 836,446', '2', '0.55');
-  sulcus('M 802,382 C 816,404 820,430 812,454', '1.8', '0.5');
-  sulcus('M 760,428 C 768,450 770,476 762,498', '2', '0.55');
-  sulcus('M 732,440 C 738,462 740,488 732,510', '1.8', '0.5');
+  // // Occipital / temporal lobe bumps (right side)
+  // sulcus('M 828,378 C 840,398 844,422 836,446', '2', '0.55');
+  // sulcus('M 802,382 C 816,404 820,430 812,454', '1.8', '0.5');
+  // sulcus('M 760,428 C 768,450 770,476 762,498', '2', '0.55');
+  // sulcus('M 732,440 C 738,462 740,488 732,510', '1.8', '0.5');
 
-  // Left side temporal gyri
-  sulcus('M 22,256 C 28,278 30,302 26,326', '2', '0.55');
-  sulcus('M 46,250 C 52,274 54,300 50,326', '1.8', '0.5');
+  // // Left side temporal gyri
+  // sulcus('M 22,256 C 28,278 30,302 26,326', '2', '0.55');
+  // sulcus('M 46,250 C 52,274 54,300 50,326', '1.8', '0.5');
 
-  // Bottom occipital bumps
-  sulcus('M 198,508 C 240,516 284,520 330,518', '2', '0.55');
-  sulcus('M 468,524 C 510,530 554,530 596,524', '2', '0.55');
+  // // Bottom occipital bumps
+  // sulcus('M 198,508 C 240,516 284,520 330,518', '2', '0.55');
+  // sulcus('M 468,524 C 510,530 554,530 596,524', '2', '0.55');
 
-  // Cerebellum suggestion (lower right area)
-  sulcus('M 690,498 C 720,490 748,482 770,468', '2.5', '0.6');
-  sulcus('M 680,510 C 712,504 742,496 764,480', '2', '0.5');
-  sulcus('M 668,520 C 700,516 732,508 756,492', '1.8', '0.45');
+  // // Cerebellum suggestion (lower right area)
+  // sulcus('M 690,498 C 720,490 748,482 770,468', '2.5', '0.6');
+  // sulcus('M 680,510 C 712,504 742,496 764,480', '2', '0.5');
+  // sulcus('M 668,520 C 700,516 732,508 756,492', '1.8', '0.45');
 
-  // Brainstem (left side, lower area)
-  sulcus('M 100,440 C 84,454 72,470 68,490 C 64,508 66,524 72,538', '4', '0.5', null, 'round');
-  sulcus('M 130,442 C 118,458 108,476 106,496 C 104,514 108,530 116,542', '3', '0.4', null, 'round');
+  // // Brainstem (left side, lower area)
+  // sulcus('M 100,440 C 84,454 72,470 68,490 C 64,508 66,524 72,538', '4', '0.5', null, 'round');
+  // sulcus('M 130,442 C 118,458 108,476 106,496 C 104,514 108,530 116,542', '3', '0.4', null, 'round');
 
   // ============================================================
   //  CONNECTOR LINES between spaces (wiggly S-curves + curved elbows)
@@ -379,17 +379,17 @@ function buildSVG() {
   gameSvg.appendChild(elTxt('text', 'FINISH', { x: sF.x, y: sF.y + R + 18, 'text-anchor': 'middle', 'dominant-baseline': 'central', 'font-family': 'Fredoka One, cursive', 'font-size': '10', fill: '#86198f' }));
 
   // ---- Condition zone labels ----
-  [
-    { x: 434, y: 72, lbl: 'Condition 1 — Acquisition', fill: '#059669' },
-    { x: 434, y: 236, lbl: 'Condition 2 — Increased Delay', fill: '#0284c7' },
-    { x: 434, y: 394, lbl: 'Condition 3 — Extinction', fill: '#dc2626' },
-  ].forEach(({ x, y, lbl, fill }) => {
-    gameSvg.appendChild(elTxt('text', lbl, {
-      x, y, 'text-anchor': 'middle', 'dominant-baseline': 'central',
-      'font-family': 'Nunito, sans-serif', 'font-size': '11', 'font-weight': '700',
-      fill, opacity: '0.65',
-    }));
-  });
+  // [
+  //   { x: 434, y: 72, lbl: 'Condition 1 — Acquisition', fill: '#059669' },
+  //   { x: 434, y: 236, lbl: 'Condition 2 — Increased Delay', fill: '#0284c7' },
+  //   { x: 434, y: 394, lbl: 'Condition 3 — Extinction', fill: '#dc2626' },
+  // ].forEach(({ x, y, lbl, fill }) => {
+  //   gameSvg.appendChild(elTxt('text', lbl, {
+  //     x, y, 'text-anchor': 'middle', 'dominant-baseline': 'central',
+  //     'font-family': 'Nunito, sans-serif', 'font-size': '11', 'font-weight': '700',
+  //     fill, opacity: '0.65',
+  //   }));
+  // });
 
   // ---- Token layer (populated by renderTokens) ----
   gameSvg.appendChild(el('g', { id: 'token-layer' }));
@@ -452,70 +452,618 @@ function renderTokens() {
 }
 
 // ============================================================
-//  QUESTIONS
+//  QUESTIONS — converted from course question bank
+//  Format matches ALL_QUESTIONS in script.js
 // ============================================================
 const ALL_QUESTIONS = [
-  // ---------- UNIT 1 ----------
-  { prompt: "What is Pavlovian conditioning?", options: ["Passive association between stimuli","Trial-and-error learning","Learning through rewards","Motor learning"], correct: 0, difficulty: "easy" },
-  { prompt: "What is the purpose of T2?", options: ["Reinforcement","Punishment","Testing learning","Training"], correct: 2, difficulty: "easy" },
-  { prompt: "Dishabituation is:", options: ["Loss of response","Return of response after habituation","Reinforcement","Extinction"], correct: 1, difficulty: "easy" },
-  { prompt: "Sensitization leads to:", options: ["Decreased response","No change","Memory loss","Increased response"], correct: 3, difficulty: "easy" },
-  { prompt: "Short ISI usually causes:", options: ["Slower habituation","Faster habituation","No learning","Extinction"], correct: 1, difficulty: "easy" },
 
-  { prompt: "Why is a common test at T2 needed?", options: ["Increase trials","Control confounds","Reinforce behavior","Reduce variability"], correct: 1, difficulty: "medium" },
-  { prompt: "Drug tolerance depends on:", options: ["Time only","Intensity","Genetics only","Context"], correct: 3, difficulty: "medium" },
-  { prompt: "Dual Process Theory includes:", options: ["Memory + reward","Habituation + sensitization","S-R + R-O","Reinforcement + punishment"], correct: 1, difficulty: "medium" },
-  { prompt: "Which is a non-learning explanation?", options: ["Conditioning","Association","Sensory adaptation","Reinforcement"], correct: 2, difficulty: "medium" },
-  { prompt: "Gradual exposure helps habituation because:", options: ["It increases intensity","It allows progressive adjustment","It removes stimuli","It prevents learning"], correct: 1, difficulty: "medium" },
+  // ==================== UNIT 1 ====================
 
-  { prompt: "A subject stops responding to a repeated tone but responds again when a new light is introduced. This is:", options: ["Extinction","Reinforcement","Dishabituation","Fatigue"], correct: 2, difficulty: "hard" },
-  { prompt: "A subject shows habituation in one room but not another. This suggests:", options: ["No learning","Stimulus is weak","Sensitization","Context matters"], correct: 3, difficulty: "hard" },
-  { prompt: "In Wagner’s model, a stimulus produces less response when:", options: ["It is new","It is strong","It is already in memory","It is random"], correct: 2, difficulty: "hard" },
-  { prompt: "Long ISI improves learning because:", options: ["It increases intensity","It reduces exposure","It prevents repetition","It allows better memory processing"], correct: 3, difficulty: "hard" },
-  { prompt: "If reduced responding is due to fatigue, then introducing a new stimulus will:", options: ["Increase responding","Have no effect","Decrease responding","Cause extinction"], correct: 1, difficulty: "hard" },
-  { prompt: "A researcher only measures behavior change within one group. The issue is:", options: ["Too many trials","Cannot isolate learning","No stimuli used","Too much variability"], correct: 1, difficulty: "hard" },
-  { prompt: "Strong stimuli leading to more habituation contradicts:", options: ["Early intensity theory","Wagner’s model","Pavlovian theory","Reinforcement theory"], correct: 0, difficulty: "hard" },
-  { prompt: "If a stimulus is expected, Wagner predicts:", options: ["Strong response","Weak or no response","No learning","Sensitization"], correct: 1, difficulty: "hard" },
-  { prompt: "Habituation being context-specific supports:", options: ["G&T only","S-R Theory","Reinforcement theory","Wagner’s model"], correct: 3, difficulty: "hard" },
-  { prompt: "Which condition is best for producing habituation?", options: ["Random exposure","Gradual increase in stimulus","No repetition","Strong stimulus"], correct: 1, difficulty: "hard" },
+  // --- Easy ---
+  {
+    prompt: "What best explains the difference between Pavlovian and instrumental conditioning?",
+    options: [
+      "Pavlovian focuses on actions, while instrumental focuses on internal states",
+      "Pavlovian links stimuli, while instrumental links behavior to outcomes",
+      "Pavlovian forms habits directly, while instrumental avoids outcomes entirely",
+      "Pavlovian ignores learning history, while instrumental depends only on repetition"
+    ],
+    correct: 1,
+    difficulty: "easy"
+  },
+  {
+    prompt: "Why are rats often used in learning experiments?",
+    options: [
+      "They display complex reasoning similar to humans in controlled settings",
+      "They consistently learn faster than other animals in most experiments",
+      "They are mammals with simple, controllable behavior",
+      "They change behavior reliably without needing reinforcement"
+    ],
+    correct: 2,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What is dishabituation?",
+    options: [
+      "A permanent loss of a learned response",
+      "A response returning after a new stimulus is introduced",
+      "A response increasing due to reinforcement",
+      "A gradual weakening of response"
+    ],
+    correct: 1,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What is sensitization?",
+    options: [
+      "A decrease in responding after repeated exposure",
+      "A stable response level across trials",
+      "A loss of responsiveness over time",
+      "An increase in responsiveness after stimulation"
+    ],
+    correct: 3,
+    difficulty: "easy"
+  },
+  {
+    prompt: "Which of the following is NOT a form of learning?",
+    options: [
+      "Conditioning through repeated pairings",
+      "Forming associations between events",
+      "Motor fatigue",
+      "Reinforcement-based behavior change"
+    ],
+    correct: 2,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What happens during stimulus satiation?",
+    options: [
+      "A stimulus is removed once a response is consistently produced",
+      "A stimulus is overused until it becomes unpleasant",
+      "A stimulus is paired with another until a new response forms",
+      "A stimulus becomes stronger with repeated reinforcement"
+    ],
+    correct: 1,
+    difficulty: "easy"
+  },
 
-  // ---------- UNIT 2 ----------
-  { prompt: "Law of Effect states:", options: ["Consequences shape behavior","Behavior is random","Learning is instant","No repetition"], correct: 0, difficulty: "easy" },
-  { prompt: "Positive reinforcement means:", options: ["Remove stimulus","Decrease behavior","Add stimulus to increase behavior","Punish behavior"], correct: 2, difficulty: "easy" },
-  { prompt: "Shaping involves:", options: ["Punishment","Ignoring behavior","Reinforcing steps toward behavior","Extinction"], correct: 2, difficulty: "easy" },
-  { prompt: "Escape learning is:", options: ["Ending an aversive stimulus","Avoiding stimulus","Reinforcing reward","Ignoring behavior"], correct: 0, difficulty: "easy" },
-  { prompt: "Overjustification effect leads to:", options: ["Increased motivation","No change","Decreased motivation","Faster learning"], correct: 2, difficulty: "easy" },
+  // --- Medium ---
+  {
+    prompt: "Why do both groups need the same test at the end of an experiment?",
+    options: [
+      "To make sure differences are due to learning",
+      "To ensure both groups experience equal numbers of trials",
+      "To keep reinforcement schedules consistent across phases",
+      "To reduce variation in testing procedures between groups"
+    ],
+    correct: 0,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What did Siegel's research on drug tolerance show?",
+    options: [
+      "Tolerance reflects stable biological differences across individuals",
+      "Tolerance becomes fixed after repeated exposure to the drug",
+      "Tolerance depends only on the amount of drug taken",
+      "Tolerance depends on environmental context"
+    ],
+    correct: 3,
+    difficulty: "medium"
+  },
+  {
+    prompt: "According to Dual Process Theory, behavior depends on:",
+    options: [
+      "Memory strength and reinforcement acting separately",
+      "Habituation and sensitization working together",
+      "Punishment and reward acting independently",
+      "Stimulus-response links without emotional influence"
+    ],
+    correct: 1,
+    difficulty: "medium"
+  },
+  {
+    prompt: "Why was there a major issue in early habituation studies?",
+    options: [
+      "Too many participants introduced unnecessary variability",
+      "They did not properly compare groups",
+      "Stimuli were too weak to produce measurable responses",
+      "Reinforcement procedures varied across trials"
+    ],
+    correct: 1,
+    difficulty: "medium"
+  },
+  {
+    prompt: "Why does gradual exposure help reduce reactions?",
+    options: [
+      "It increases stimulus intensity gradually",
+      "It prevents sensitization entirely",
+      "It allows adjustment without triggering strong sensitization",
+      "It removes the stimulus early"
+    ],
+    correct: 2,
+    difficulty: "medium"
+  },
+  {
+    prompt: "Why is behavior considered ordinal?",
+    options: [
+      "It measures precise numerical differences between responses",
+      "It shows order but not equal spacing between values",
+      "It tracks continuous change in behavior over time",
+      "It removes differences between individuals completely"
+    ],
+    correct: 1,
+    difficulty: "medium"
+  },
 
-  { prompt: "Secondary reinforcers work because:", options: ["They are paired with primary reinforcers","They are natural","They are intense","They are random"], correct: 0, difficulty: "medium" },
-  { prompt: "Outcome devaluation tests:", options: ["Memory","Reflexes","Goal-directed behavior","Sensory processing"], correct: 2, difficulty: "medium" },
-  { prompt: "Crespi’s experiment shows:", options: ["No change","Equal behavior","Emotional reaction to reward changes","No learning"], correct: 2, difficulty: "medium" },
-  { prompt: "Matching law predicts:", options: ["Equal behavior","Behavior matches reinforcement rates","Random behavior","No learning"], correct: 1, difficulty: "medium" },
-  { prompt: "Delay discounting explains:", options: ["Memory loss","Preference for delayed rewards","Preference for immediate rewards","No choice"], correct: 2, difficulty: "medium" },
+  // --- Hard ---
+  {
+    prompt: "According to Wagner, when does learning occur?",
+    options: [
+      "When a stimulus is repeated many times",
+      "When a stimulus is unexpected or surprising",
+      "When a stimulus is weak in intensity",
+      "When the context remains constant"
+    ],
+    correct: 1,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What happens if a stimulus is already active in short-term memory?",
+    options: [
+      "The response becomes stronger with repetition",
+      "The response becomes weaker",
+      "Learning stops completely",
+      "Learning increases automatically"
+    ],
+    correct: 1,
+    difficulty: "hard"
+  },
+  {
+    prompt: "Why does a longer gap between stimuli improve learning?",
+    options: [
+      "It increases the intensity of the stimulus",
+      "It reduces the number of exposures",
+      "It allows the first stimulus to leave short-term memory",
+      "It removes contextual influence"
+    ],
+    correct: 2,
+    difficulty: "hard"
+  },
+  {
+    prompt: "How does Wagner's model differ from Groves and Thompson's theory?",
+    options: [
+      "Both models ignore memory processes",
+      "Wagner focuses on memory and context, while Groves and Thompson focus on two processes",
+      "Groves and Thompson ignore habituation",
+      "Wagner ignores sensitization"
+    ],
+    correct: 1,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What role does context play in habituation?",
+    options: [
+      "It has no effect on behavior",
+      "It always strengthens responses",
+      "It determines whether habituation transfers to new situations",
+      "It removes learned associations"
+    ],
+    correct: 2,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What does it mean if a response returns in a new environment?",
+    options: [
+      "No learning occurred",
+      "The stimulus was too weak",
+      "The learning was tied to the original context",
+      "Sensitization replaced habituation"
+    ],
+    correct: 2,
+    difficulty: "hard"
+  },
+  {
+    prompt: "Why is it important to compare different groups in experiments?",
+    options: [
+      "Individuals cannot learn reliably",
+      "Behavior remains constant without comparison",
+      "It separates learning from fatigue or other changes",
+      "Groups always respond more consistently"
+    ],
+    correct: 2,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What did Davis and Wagner find about strong stimuli?",
+    options: [
+      "Weak stimuli produce more consistent learning patterns",
+      "Stimulus intensity has no effect on learning outcomes",
+      "Strong stimuli can lead to strong habituation",
+      "Strong stimuli prevent learning from occurring"
+    ],
+    correct: 2,
+    difficulty: "hard"
+  },
 
-  { prompt: "A rat stops pressing a lever after food is paired with illness. This shows:", options: ["S-R learning","No learning","Goal-directed behavior","Extinction"], correct: 2, difficulty: "hard" },
-  { prompt: "A subject keeps responding even after reward loses value. This suggests:", options: ["Goal-directed","Reinforcement","Habit (S-R)","No learning"], correct: 2, difficulty: "hard" },
-  { prompt: "A stimulus increases a response linked to the same outcome. This is:", options: ["Extinction","Punishment","Outcome-mediated transfer","Habituation"], correct: 2, difficulty: "hard" },
-  { prompt: "A subject runs slower after reward is reduced. This is:", options: ["Elation","Reinforcement","Depression effect","Extinction"], correct: 2, difficulty: "hard" },
-  { prompt: "Under S-R theory, outcome devaluation should cause:", options: ["No change","Reduced responding","Increased responding","Extinction"], correct: 0, difficulty: "hard" },
-  { prompt: "Choosing a small immediate reward reflects:", options: ["Delay discounting","Matching law","Reinforcement","Extinction"], correct: 0, difficulty: "hard" },
-  { prompt: "Using a preferred activity to reinforce another is:", options: ["Punishment","Extinction","Premack Principle","Habituation"], correct: 2, difficulty: "hard" },
-  { prompt: "Rewarding an already enjoyable activity reduces motivation due to:", options: ["Reinforcement","Punishment","Overjustification","Extinction"], correct: 2, difficulty: "hard" },
-  { prompt: "Using a stimulus to guide which response leads to which outcome reflects:", options: ["Hierarchical learning","S-R","Reflex","No learning"], correct: 0, difficulty: "hard" },
-  { prompt: "Delayed reinforcement in shaping leads to:", options: ["Confusion about behavior","Faster learning","Stronger habit","No effect"], correct: 1, difficulty: "hard" },
+  // ==================== UNIT 2 ====================
 
-  // ---------- UNIT 3 ----------
-  { prompt: "Positive punishment:", options: ["Remove stimulus","Add unpleasant stimulus","Increase reward","Ignore behavior"], correct: 1, difficulty: "easy" },
-  { prompt: "Negative punishment:", options: ["Remove pleasant stimulus","Add stimulus","Reinforcement","Ignore behavior"], correct: 0, difficulty: "easy" },
-  { prompt: "Obsessions are:", options: ["Behaviors","Rewards","Intrusive thoughts","Stimuli"], correct: 2, difficulty: "easy" },
+  // --- Easy ---
+  {
+    prompt: "What does the Law of Effect suggest?",
+    options: [
+      "Behaviors followed by positive outcomes are more likely to repeat",
+      "Behaviors followed by neutral outcomes are equally likely to continue",
+      "Behaviors occur randomly regardless of the outcomes that follow them",
+      "Behaviors decrease only when punishment is applied consistently"
+    ],
+    correct: 0,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What is negative reinforcement?",
+    options: [
+      "Adding an unpleasant stimulus in order to reduce a behavior",
+      "Removing something unpleasant to increase behavior",
+      "Removing a rewarding stimulus in order to weaken a behavior",
+      "Ignoring a behavior completely until it gradually disappears"
+    ],
+    correct: 1,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What is a primary reinforcer?",
+    options: [
+      "Something naturally rewarding like food",
+      "A signal that becomes rewarding through repeated association with outcomes",
+      "A neutral event that gains value only after extensive conditioning trials",
+      "A consequence that consistently reduces the likelihood of a behavior"
+    ],
+    correct: 0,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What happens in escape learning?",
+    options: [
+      "A response prevents a stimulus from occurring in the future",
+      "Behavior is strengthened without any aversive conditions present",
+      "An ongoing unpleasant stimulus is stopped",
+      "Stimuli are ignored because they no longer influence behavior"
+    ],
+    correct: 2,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What is the overjustification effect?",
+    options: [
+      "Motivation increases when external rewards are consistently provided",
+      "External rewards reduce internal motivation",
+      "Motivation remains unchanged regardless of reward presence",
+      "Learning becomes faster when rewards are introduced"
+    ],
+    correct: 1,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What is the difference between escape and avoidance?",
+    options: [
+      "Both processes involve stopping a stimulus after it has already begun",
+      "Escape occurs without learning while avoidance depends on learning",
+      "Avoidance relies on punishment while escape relies on reinforcement",
+      "Escape ends a stimulus, avoidance prevents it"
+    ],
+    correct: 3,
+    difficulty: "easy"
+  },
 
-  { prompt: "ERP therapy involves:", options: ["Exposure without compulsions","Avoidance","Reinforcement","Punishment"], correct: 0, difficulty: "medium" },
-  { prompt: "Effective punishment must be:", options: ["Delayed","Weak","Random","Immediate, strong, consistent"], correct: 3, difficulty: "medium" },
-  { prompt: "Punishment often works by:", options: ["Suppressing behavior","Teaching behavior","Reinforcing behavior","Erasing behavior"], correct: 0, difficulty: "medium" },
+  // --- Medium ---
+  {
+    prompt: "Why do secondary reinforcers work?",
+    options: [
+      "They are naturally rewarding without requiring prior learning experiences",
+      "They are associated with primary reinforcers and are immediate",
+      "They are stronger than primary reinforcers across most learning situations",
+      "They influence behavior even without any connection to prior outcomes"
+    ],
+    correct: 1,
+    difficulty: "medium"
+  },
+  {
+    prompt: "Why is shaping useful?",
+    options: [
+      "It removes unwanted behavior by consistently applying punishment procedures",
+      "It replaces learned responses by encouraging automatic reflexive patterns",
+      "It builds complex behavior step by step",
+      "It avoids difficult tasks by reducing exposure to challenging conditions"
+    ],
+    correct: 2,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What did Tinklepaugh's study show?",
+    options: [
+      "Animals respond only to rewards that are immediately presented to them",
+      "Animals ignore differences between expected and received rewards",
+      "Animals rely entirely on habit without considering expected outcomes",
+      "Animals form expectations about outcomes"
+    ],
+    correct: 3,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What did Crespi's experiment demonstrate?",
+    options: [
+      "Behavior remains stable even when reward size changes across trials",
+      "Animals react emotionally to changes in reward",
+      "Behavior decreases only when rewards are completely removed from tasks",
+      "Learning stops entirely when rewards become inconsistent across trials"
+    ],
+    correct: 1,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What does the matching law describe?",
+    options: [
+      "Behavior matches how often rewards are given",
+      "Behavior is distributed equally across all available response options",
+      "Behavior occurs randomly without regard to reinforcement schedules",
+      "Learning stops once reinforcement becomes consistent across choices"
+    ],
+    correct: 0,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What does the Premack Principle explain?",
+    options: [
+      "High-probability behaviors can reinforce low-probability ones",
+      "Punishment is more effective than reinforcement for changing behavior",
+      "Reinforcement is unnecessary because behavior changes naturally",
+      "Habituation explains why behavior decreases after repeated exposure"
+    ],
+    correct: 0,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What happens in avoidance learning?",
+    options: [
+      "A response stops a stimulus after it has already started",
+      "A response prevents an unpleasant event from happening",
+      "Behavior increases without any connection to aversive stimuli",
+      "Learning does not occur because the stimulus is never experienced"
+    ],
+    correct: 1,
+    difficulty: "medium"
+  },
 
-  { prompt: "A child behaves only when a strict parent is present. This means:", options: ["Behavior is erased","No learning","Reinforcement","Parent is an Sd for punishment"], correct: 3, difficulty: "hard" },
-  { prompt: "In ERP, anxiety decreases after not performing a ritual because:", options: ["Punishment","Reinforcement of compulsion","Sensitization","Learning that feared outcome doesn’t occur"], correct: 3, difficulty: "hard" },
-  { prompt: "Avoidance behavior persists because:", options: ["Reward is given","Fear reduction reinforces behavior","No learning","Punishment"], correct: 1, difficulty: "hard" },
-  { prompt: "Behavior returns after punishment stops because:", options: ["It was erased","It was reinforced","It was suppressed, not unlearned","It was forgotten"], correct: 2, difficulty: "hard" }
+  // --- Hard ---
+  {
+    prompt: "What is being tested in outcome devaluation?",
+    options: [
+      "How well a subject remembers previous learning experiences over time",
+      "Whether behavior depends on how valuable the outcome is",
+      "Whether reflexive responses occur without considering expected outcomes",
+      "How accurately a subject can detect changes in sensory information"
+    ],
+    correct: 1,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What does it mean if behavior decreases after the reward loses value?",
+    options: [
+      "The behavior is controlled by habits rather than expected outcomes",
+      "No meaningful learning occurred during the training phase",
+      "The behavior is goal-directed",
+      "Reinforcement procedures were not strong enough to influence behavior"
+    ],
+    correct: 2,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What would S-R theory predict after a reward is devalued?",
+    options: [
+      "Behavior stays the same",
+      "Behavior decreases because the reward is no longer considered valuable",
+      "Behavior increases because the subject is uncertain about outcomes",
+      "Behavior stops entirely once the reward loses its reinforcing value"
+    ],
+    correct: 0,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What happens in outcome-mediated transfer?",
+    options: [
+      "A stimulus produces a response directly without activating any outcome memory",
+      "A response becomes weaker because reinforcement is no longer delivered afterward",
+      "A stimulus activates a memory of the outcome and influences behavior",
+      "A stimulus prevents earlier learned associations from affecting current behavior"
+    ],
+    correct: 2,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What is hierarchical learning?",
+    options: [
+      "Behavior is controlled only by reflexive processes without outcome information",
+      "A stimulus signals which action leads to which outcome",
+      "Behavior is based entirely on habits without representing expected outcomes",
+      "Actions are selected randomly without influence from stimuli or outcomes"
+    ],
+    correct: 1,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What is delay discounting?",
+    options: [
+      "Preference for delayed rewards regardless of their size or probability",
+      "Preference for smaller immediate rewards over larger delayed ones",
+      "Inability to choose between rewards due to uncertainty about outcomes",
+      "Loss of memory for reward timing after repeated learning trials"
+    ],
+    correct: 1,
+    difficulty: "hard"
+  },
+  {
+    prompt: "What does a high discount rate suggest about behavior?",
+    options: [
+      "Strong preference for long-term rewards over immediate outcomes",
+      "Impulsivity",
+      "No consistent preference between immediate and delayed outcomes",
+      "Improved ability to remember and evaluate future consequences"
+    ],
+    correct: 1,
+    difficulty: "hard"
+  },
+
+  // ==================== UNIT 3 ====================
+
+  // --- Easy ---
+  {
+    prompt: "What is positive punishment?",
+    options: [
+      "Removing a reward in order to reduce a behavior",
+      "Adding something unpleasant to reduce behavior",
+      "Increasing a behavior by providing a rewarding outcome",
+      "Ignoring a behavior until it decreases over time"
+    ],
+    correct: 1,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What is negative punishment?",
+    options: [
+      "Removing something pleasant to reduce behavior",
+      "Adding an unpleasant stimulus to increase responding",
+      "Reinforcing behavior to make it occur more frequently",
+      "Ignoring behavior so it decreases naturally"
+    ],
+    correct: 0,
+    difficulty: "easy"
+  },
+  {
+    prompt: "Why did Skinner argue punishment is not very effective?",
+    options: [
+      "It increases behavior rather than reducing it over time",
+      "It teaches correct behavior in a clear and consistent way",
+      "It only suppresses behavior instead of reversing learning",
+      "It has no measurable effect on behavior at all"
+    ],
+    correct: 2,
+    difficulty: "easy"
+  },
+
+  // --- Medium ---
+  {
+    prompt: "What makes punishment more effective?",
+    options: [
+      "Applying punishment after a delay following the behavior",
+      "Using low intensity to avoid negative emotional effects",
+      "Being immediate, strong, and consistent",
+      "Delivering punishment randomly across different situations"
+    ],
+    correct: 2,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What is conditioned suppression?",
+    options: [
+      "Learning disappears completely after repeated extinction trials",
+      "Fear interferes with normal behavior",
+      "Reinforcement increases the likelihood of responding over time",
+      "Memory is lost due to repeated exposure to the stimulus"
+    ],
+    correct: 1,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What is a major problem with punishment?",
+    options: [
+      "It often does not show what behavior should replace the bad one",
+      "It removes all learning associated with the punished behavior",
+      "It teaches the correct behavior that should replace the unwanted one",
+      "It prevents emotional responses from forming during learning"
+    ],
+    correct: 0,
+    difficulty: "medium"
+  },
+  {
+    prompt: "In blocking, what happens to a new cue introduced after learning?",
+    options: [
+      "A new cue becomes strongly associated because it appears with reinforcement",
+      "A new cue replaces the original cue in controlling the response",
+      "A new cue gains little or no associative strength because the outcome is predicted",
+      "A new cue causes extinction of the previously learned response"
+    ],
+    correct: 2,
+    difficulty: "medium"
+  },
+  {
+    prompt: "Overshadowing occurs when:",
+    options: [
+      "Both cues are learned equally during conditioning trials",
+      "A weaker cue becomes the strongest predictor of the outcome",
+      "A more noticeable cue limits learning about another cue",
+      "No association forms between cues and outcomes"
+    ],
+    correct: 2,
+    difficulty: "medium"
+  },
+
+  // --- Hard ---
+  {
+    prompt: "In the Rescorla–Wagner model, learning depends on:",
+    options: [
+      "The number of times a stimulus is paired with reinforcement",
+      "The overall intensity of the stimulus during each trial",
+      "Changes in context that alter how the stimulus is processed",
+      "Prediction error between expected and actual outcomes"
+    ],
+    correct: 3,
+    difficulty: "hard"
+  },
+  {
+    prompt: "According to the Rescorla–Wagner model, learning stops when:",
+    options: [
+      "The outcome is fully predicted",
+      "The stimulus is no longer presented during training",
+      "The number of trials reaches a fixed limit in the experiment",
+      "The behavioral response gradually decreases over time"
+    ],
+    correct: 0,
+    difficulty: "hard"
+  },
+  {
+    prompt: "A child behaves well only when a strict parent is present. This illustrates:",
+    options: [
+      "The behavior has been permanently erased by punishment",
+      "No meaningful learning has taken place",
+      "The child is being positively reinforced for good behavior",
+      "The parent has become an S-delta signaling that punishment will not occur when absent"
+    ],
+    correct: 3,
+    difficulty: "hard"
+  },
+  {
+    prompt: "Avoidance behavior persists even when the threat is gone because:",
+    options: [
+      "A reward is provided each time the behavior occurs",
+      "Fear reduction reinforces the avoidance response",
+      "No learning took place during the original conditioning",
+      "Punishment strengthens avoidance over time"
+    ],
+    correct: 1,
+    difficulty: "hard"
+  },
+  {
+    prompt: "Behavior returns after punishment is removed because:",
+    options: [
+      "The behavior was permanently erased from memory",
+      "The behavior was reinforced during the punishment phase",
+      "The behavior was suppressed but never unlearned",
+      "The behavior was forgotten and then reacquired"
+    ],
+    correct: 2,
+    difficulty: "hard"
+  }
+
 ];
 
 // ============================================================
@@ -894,26 +1442,26 @@ function buildPI(p) {
   }
   if (t2 > 0) {
     const pct = Math.round(p.c2Delayed / t2 * 100);
-    if (p.c2Delayed < p.c1Delayed) lines.push(`In <strong>Condition 2 (Increased Delay)</strong>, delayed choices dropped to ${p.c2Delayed}/${t2} (${pct}%) — consistent with <em>delay discounting</em>.`);
-    else if (p.c2Delayed === p.c1Delayed) lines.push(`In <strong>Condition 2</strong>, ${p.name} held steady at ${p.c2Delayed}/${t2} delayed choices (${pct}%), suggesting stable delay tolerance.`);
+    if (p.c2Delayed < p.c1Delayed) lines.push(`In <strong>Condition 2 (Increased Delay)</strong>, delayed choices dropped to ${p.c2Delayed}/${t2} (${pct}%): <em>delay discounting</em>.`);
+    else if (p.c2Delayed === p.c1Delayed) lines.push(`In <strong>Condition 2</strong>, ${p.name} held steady at ${p.c2Delayed}/${t2} delayed choices (${pct}%), suggesting delay tolerance.`);
     else lines.push(`In <strong>Condition 2</strong>, delayed choices increased to ${p.c2Delayed}/${t2} (${pct}%), atypical of delay discounting.`);
   }
   if (t3 > 0) {
     const pct = Math.round(p.c3Delayed / t3 * 100);
-    if (p.c3Delayed > 0) lines.push(`In <strong>Condition 3 (Extinction)</strong>, ${p.name} still chose delayed ${p.c3Delayed}/${t3} times (${pct}%) even though it no longer paid off — the <em>Partial Reinforcement Extinction Effect</em>.`);
-    else lines.push(`In <strong>Condition 3</strong>, ${p.name} stopped choosing delayed (0/${t3}) — suggesting goal-directed behavior responsive to outcome change.`);
+    if (p.c3Delayed > 0) lines.push(`In <strong>Condition 3 (Extinction)</strong>, ${p.name} still chose delayed ${p.c3Delayed}/${t3} times (${pct}%) even though it no longer paid off: the <em>Partial Reinforcement Extinction Effect</em>.`);
+    else lines.push(`In <strong>Condition 3</strong>, ${p.name} stopped choosing delayed (0/${t3}), suggesting goal-directed behavior responsive to outcome change.`);
   }
 
   const tc = p.c1CueShown + p.c2CueShown + p.c3CueShown;
   if (tc > 0) {
     lines.push('<strong>🔔 Pavlovian Cue Analysis:</strong>');
-    if (p.c1CueShown > 0) lines.push(`During <strong>Condition 1</strong>, the 🔔 cue appeared ${p.c1CueShown} time(s) and was always rewarded — establishing a reliable <em>conditioned expectation</em>.`);
-    if (p.c2CueShown > 0) lines.push(`In <strong>Condition 2</strong>, the cue appeared ${p.c2CueShown} time(s) but rewarded only ${p.c2CueRewarded} — mirroring a <em>variable schedule</em> maintaining partial responding.`);
+    if (p.c1CueShown > 0) lines.push(`During <strong>Condition 1</strong>, the 🔔 cue appeared ${p.c1CueShown} time(s) and was always rewarded, establishing a reliable <em>conditioned expectation</em>.`);
+    if (p.c2CueShown > 0) lines.push(`In <strong>Condition 2</strong>, the cue appeared ${p.c2CueShown} time(s) but rewarded only ${p.c2CueRewarded}, representing a <em>variable schedule</em> maintaining partial responding.`);
     if (p.c3CueShown > 0) lines.push(`In <strong>Condition 3</strong>, the cue appeared ${p.c3CueShown} time(s) with no bonus — classic <em>Pavlovian extinction</em>.`);
   }
 
-  if (p.finalChallengeAttempts > 1) lines.push(`${p.name} needed <strong>${p.finalChallengeAttempts} attempts</strong> at the Final Challenge — persistence in the face of punishment!`);
-  if (p.lostMoveCount > 0) lines.push(`${p.name} lost <strong>${p.lostMoveCount} move(s)</strong> to wrong answers, functioning as <em>positive punishment</em> — swift, sufficient, consistent.`);
+  if (p.finalChallengeAttempts > 1) lines.push(`${p.name} needed <strong>${p.finalChallengeAttempts} attempts</strong> at the Final Challenge, showing persistence in the face of punishment!`);
+  if (p.lostMoveCount > 0) lines.push(`${p.name} lost <strong>${p.lostMoveCount} move(s)</strong> to wrong answers, functioning as <em>positive punishment</em>.`);
   else lines.push(`${p.name} didn't lose any moves, so punishment had no measurable impact this game.`);
 
   return lines.map(l => `<p>${l}</p>`).join('');
