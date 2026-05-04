@@ -459,7 +459,6 @@ const ALL_QUESTIONS = [
 
   // ==================== UNIT 1 ====================
 
-  // --- Easy ---
   {
     prompt: "What best explains the difference between Pavlovian and instrumental conditioning?",
     options: [
@@ -476,44 +475,33 @@ const ALL_QUESTIONS = [
     options: [
       "They display complex reasoning similar to humans in controlled settings",
       "They consistently learn faster than other animals in most experiments",
-      "They are mammals with simple, controllable behavior",
+      "They are intelligent, good models, have similar brain structure to humans, and are easy to handle",
       "They change behavior reliably without needing reinforcement"
     ],
     correct: 2,
     difficulty: "easy"
   },
   {
-    prompt: "What is dishabituation?",
+    prompt: "What did Siegel’s research on drug tolerance show?",
     options: [
-      "A permanent loss of a learned response",
-      "A response returning after a new stimulus is introduced",
-      "A response increasing due to reinforcement",
-      "A gradual weakening of response"
-    ],
-    correct: 1,
-    difficulty: "easy"
-  },
-  {
-    prompt: "What is sensitization?",
-    options: [
-      "A decrease in responding after repeated exposure",
-      "A stable response level across trials",
-      "A loss of responsiveness over time",
-      "An increase in responsiveness after stimulation"
+      "Tolerance reflects stable biological differences across individuals",
+      "Tolerance becomes fixed after repeated exposure to the drug",
+      "Tolerance depends only on the amount of drug taken",
+      "Tolerance depends on environmental context"
     ],
     correct: 3,
-    difficulty: "easy"
+    difficulty: "medium"
   },
   {
-    prompt: "Which of the following is NOT a form of learning?",
+    prompt: "Why do both groups need the same test at the end of an experiment?",
     options: [
-      "Conditioning through repeated pairings",
-      "Forming associations between events",
-      "Motor fatigue",
-      "Reinforcement-based behavior change"
+      "To make sure differences are due to learning",
+      "To ensure both groups experience equal numbers of trials",
+      "To keep reinforcement schedules consistent across phases",
+      "To make sure differences are due to performance"
     ],
-    correct: 2,
-    difficulty: "easy"
+    correct: 0,
+    difficulty: "medium"
   },
   {
     prompt: "What happens during stimulus satiation?",
@@ -526,29 +514,38 @@ const ALL_QUESTIONS = [
     correct: 1,
     difficulty: "easy"
   },
-
-  // --- Medium ---
   {
-    prompt: "Why do both groups need the same test at the end of an experiment?",
+    prompt: "Why is behavior considered ordinal?",
     options: [
-      "To make sure differences are due to learning",
-      "To ensure both groups experience equal numbers of trials",
-      "To keep reinforcement schedules consistent across phases",
-      "To reduce variation in testing procedures between groups"
+      "It measures precise numerical differences between responses",
+      "It shows order but not equal spacing between values",
+      "It tracks continuous change in behavior over time",
+      "It removes differences between individuals completely"
     ],
-    correct: 0,
+    correct: 1,
     difficulty: "medium"
   },
   {
-    prompt: "What did Siegel's research on drug tolerance show?",
+    prompt: "What was a major issue in early habituation studies?",
     options: [
-      "Tolerance reflects stable biological differences across individuals",
-      "Tolerance becomes fixed after repeated exposure to the drug",
-      "Tolerance depends only on the amount of drug taken",
-      "Tolerance depends on environmental context"
+      "Too many participants introduced unnecessary variability",
+      "They did not properly compare groups",
+      "Stimuli were too weak to produce measurable responses",
+      "Reinforcement procedures varied across trials"
     ],
-    correct: 3,
+    correct: 1,
     difficulty: "medium"
+  },
+  {
+    prompt: "What did Davis and Wagner find about habituation to intense stimuli?",
+    options: [
+      "Weak stimuli produce more consistent habituation across repeated trials",
+      "Stimulus intensity does not influence habituation over time",
+      "Intense stimuli can still produce strong habituation after repeated exposure",
+      "Intense stimuli prevent habituation from developing completely"
+    ],
+    correct: 2,
+    difficulty: "hard"
   },
   {
     prompt: "According to Dual Process Theory, behavior depends on:",
@@ -562,40 +559,38 @@ const ALL_QUESTIONS = [
     difficulty: "medium"
   },
   {
-    prompt: "Why was there a major issue in early habituation studies?",
+    prompt: "What is sensitization?",
     options: [
-      "Too many participants introduced unnecessary variability",
-      "They did not properly compare groups",
-      "Stimuli were too weak to produce measurable responses",
-      "Reinforcement procedures varied across trials"
+      "A decrease in responding after repeated exposure",
+      "A stable response level across trials",
+      "A loss of responsiveness over time",
+      "An increase in responsiveness after stimulation"
     ],
-    correct: 1,
-    difficulty: "medium"
+    correct: 3,
+    difficulty: "easy"
   },
   {
-    prompt: "Why does gradual exposure help reduce reactions?",
+    prompt: "What is dishabituation?",
     options: [
-      "It increases stimulus intensity gradually",
-      "It prevents sensitization entirely",
-      "It allows adjustment without triggering strong sensitization",
-      "It removes the stimulus early"
+      "A permanent loss of a learned response",
+      "A habituated response returns after a separate novel stimulus is presented",
+      "A response increasing due to reinforcement",
+      "A habituated response returns as a distracting stimulus increases general responding"
+    ],
+    correct: 1,
+    difficulty: "easy"
+  },
+  {
+    prompt: "Which of the following is not a form of learning?",
+    options: [
+      "Conditioning through repeated pairings",
+      "Forming associations between events",
+      "Motor fatigue",
+      "Reinforcement-based behavior change"
     ],
     correct: 2,
-    difficulty: "medium"
+    difficulty: "easy"
   },
-  {
-    prompt: "Why is behavior considered ordinal?",
-    options: [
-      "It measures precise numerical differences between responses",
-      "It shows order but not equal spacing between values",
-      "It tracks continuous change in behavior over time",
-      "It removes differences between individuals completely"
-    ],
-    correct: 1,
-    difficulty: "medium"
-  },
-
-  // --- Hard ---
   {
     prompt: "According to Wagner, when does learning occur?",
     options: [
@@ -611,7 +606,7 @@ const ALL_QUESTIONS = [
     prompt: "What happens if a stimulus is already active in short-term memory?",
     options: [
       "The response becomes stronger with repetition",
-      "The response becomes weaker",
+      "There is no response and no learning about context-S association",
       "Learning stops completely",
       "Learning increases automatically"
     ],
@@ -630,10 +625,10 @@ const ALL_QUESTIONS = [
     difficulty: "hard"
   },
   {
-    prompt: "How does Wagner's model differ from Groves and Thompson's theory?",
+    prompt: "How does Wagner’s model differ from Groves and Thompson’s theory?",
     options: [
       "Both models ignore memory processes",
-      "Wagner focuses on memory and context, while Groves and Thompson focus on two processes",
+      "Wagner focuses on memory and context, while G&T focus on two processes",
       "Groves and Thompson ignore habituation",
       "Wagner ignores sensitization"
     ],
@@ -652,6 +647,17 @@ const ALL_QUESTIONS = [
     difficulty: "hard"
   },
   {
+    prompt: "Why does gradual exposure help reduce reactions?",
+    options: [
+      "It increases stimulus intensity gradually",
+      "It prevents sensitization entirely",
+      "It allows adjustment without triggering strong sensitization",
+      "It removes the stimulus early"
+    ],
+    correct: 2,
+    difficulty: "medium"
+  },
+  {
     prompt: "What does it mean if a response returns in a new environment?",
     options: [
       "No learning occurred",
@@ -663,31 +669,19 @@ const ALL_QUESTIONS = [
     difficulty: "hard"
   },
   {
-    prompt: "Why is it important to compare different groups in experiments?",
+    prompt: "What is dishabituation mainly used for in learning experiments?",
     options: [
-      "Individuals cannot learn reliably",
-      "Behavior remains constant without comparison",
-      "It separates learning from fatigue or other changes",
-      "Groups always respond more consistently"
+      "To strengthen conditioned responses after repeated reinforcement trials",
+      "To help show that a reduced response is due to habituation rather than fatigue or sensory adaptation",
+      "To prevent subjects from forming associations during repeated stimulus exposure",
+      "To measure how quickly subjects learn new conditioned responses"
     ],
-    correct: 2,
-    difficulty: "hard"
-  },
-  {
-    prompt: "What did Davis and Wagner find about strong stimuli?",
-    options: [
-      "Weak stimuli produce more consistent learning patterns",
-      "Stimulus intensity has no effect on learning outcomes",
-      "Strong stimuli can lead to strong habituation",
-      "Strong stimuli prevent learning from occurring"
-    ],
-    correct: 2,
+    correct: 1,
     difficulty: "hard"
   },
 
   // ==================== UNIT 2 ====================
 
-  // --- Easy ---
   {
     prompt: "What does the Law of Effect suggest?",
     options: [
@@ -711,6 +705,17 @@ const ALL_QUESTIONS = [
     difficulty: "easy"
   },
   {
+    prompt: "Why is shaping useful?",
+    options: [
+      "It removes unwanted behavior by consistently applying punishment procedures",
+      "It replaces learned responses by encouraging automatic reflexive patterns",
+      "It builds complex behavior step by step",
+      "It avoids difficult tasks by reducing exposure to challenging conditions"
+    ],
+    correct: 2,
+    difficulty: "medium"
+  },
+  {
     prompt: "What is a primary reinforcer?",
     options: [
       "Something naturally rewarding like food",
@@ -721,41 +726,6 @@ const ALL_QUESTIONS = [
     correct: 0,
     difficulty: "easy"
   },
-  {
-    prompt: "What happens in escape learning?",
-    options: [
-      "A response prevents a stimulus from occurring in the future",
-      "Behavior is strengthened without any aversive conditions present",
-      "An ongoing unpleasant stimulus is stopped",
-      "Stimuli are ignored because they no longer influence behavior"
-    ],
-    correct: 2,
-    difficulty: "easy"
-  },
-  {
-    prompt: "What is the overjustification effect?",
-    options: [
-      "Motivation increases when external rewards are consistently provided",
-      "External rewards reduce internal motivation",
-      "Motivation remains unchanged regardless of reward presence",
-      "Learning becomes faster when rewards are introduced"
-    ],
-    correct: 1,
-    difficulty: "easy"
-  },
-  {
-    prompt: "What is the difference between escape and avoidance?",
-    options: [
-      "Both processes involve stopping a stimulus after it has already begun",
-      "Escape occurs without learning while avoidance depends on learning",
-      "Avoidance relies on punishment while escape relies on reinforcement",
-      "Escape ends a stimulus, avoidance prevents it"
-    ],
-    correct: 3,
-    difficulty: "easy"
-  },
-
-  // --- Medium ---
   {
     prompt: "Why do secondary reinforcers work?",
     options: [
@@ -768,18 +738,7 @@ const ALL_QUESTIONS = [
     difficulty: "medium"
   },
   {
-    prompt: "Why is shaping useful?",
-    options: [
-      "It removes unwanted behavior by consistently applying punishment procedures",
-      "It replaces learned responses by encouraging automatic reflexive patterns",
-      "It builds complex behavior step by step",
-      "It avoids difficult tasks by reducing exposure to challenging conditions"
-    ],
-    correct: 2,
-    difficulty: "medium"
-  },
-  {
-    prompt: "What did Tinklepaugh's study show?",
+    prompt: "What did Tinklepaugh’s study show?",
     options: [
       "Animals respond only to rewards that are immediately presented to them",
       "Animals ignore differences between expected and received rewards",
@@ -790,10 +749,10 @@ const ALL_QUESTIONS = [
     difficulty: "medium"
   },
   {
-    prompt: "What did Crespi's experiment demonstrate?",
+    prompt: "What did Crespi’s experiment demonstrate?",
     options: [
       "Behavior remains stable even when reward size changes across trials",
-      "Animals react emotionally to changes in reward",
+      "Current behavior depends on comparison with past learning",
       "Behavior decreases only when rewards are completely removed from tasks",
       "Learning stops entirely when rewards become inconsistent across trials"
     ],
@@ -801,45 +760,10 @@ const ALL_QUESTIONS = [
     difficulty: "medium"
   },
   {
-    prompt: "What does the matching law describe?",
-    options: [
-      "Behavior matches how often rewards are given",
-      "Behavior is distributed equally across all available response options",
-      "Behavior occurs randomly without regard to reinforcement schedules",
-      "Learning stops once reinforcement becomes consistent across choices"
-    ],
-    correct: 0,
-    difficulty: "medium"
-  },
-  {
-    prompt: "What does the Premack Principle explain?",
-    options: [
-      "High-probability behaviors can reinforce low-probability ones",
-      "Punishment is more effective than reinforcement for changing behavior",
-      "Reinforcement is unnecessary because behavior changes naturally",
-      "Habituation explains why behavior decreases after repeated exposure"
-    ],
-    correct: 0,
-    difficulty: "medium"
-  },
-  {
-    prompt: "What happens in avoidance learning?",
-    options: [
-      "A response stops a stimulus after it has already started",
-      "A response prevents an unpleasant event from happening",
-      "Behavior increases without any connection to aversive stimuli",
-      "Learning does not occur because the stimulus is never experienced"
-    ],
-    correct: 1,
-    difficulty: "medium"
-  },
-
-  // --- Hard ---
-  {
     prompt: "What is being tested in outcome devaluation?",
     options: [
       "How well a subject remembers previous learning experiences over time",
-      "Whether behavior depends on how valuable the outcome is",
+      "Whether behavior is based on a representation of the outcome and its value",
       "Whether reflexive responses occur without considering expected outcomes",
       "How accurately a subject can detect changes in sensory information"
     ],
@@ -847,7 +771,7 @@ const ALL_QUESTIONS = [
     difficulty: "hard"
   },
   {
-    prompt: "What does it mean if behavior decreases after the reward loses value?",
+    prompt: "What does it mean if behavior decreases after the reward loses value during extinction without an opportunity to experience behavior and the new outcome value?",
     options: [
       "The behavior is controlled by habits rather than expected outcomes",
       "No meaningful learning occurred during the training phase",
@@ -891,6 +815,17 @@ const ALL_QUESTIONS = [
     difficulty: "hard"
   },
   {
+    prompt: "What does the matching law describe?",
+    options: [
+      "The relative rate of responding matches the relative rate of reinforcement",
+      "Behavior is distributed equally across all available response options",
+      "Behavior occurs randomly without regard to reinforcement schedules",
+      "Learning stops once reinforcement becomes consistent across choices"
+    ],
+    correct: 0,
+    difficulty: "medium"
+  },
+  {
     prompt: "What is delay discounting?",
     options: [
       "Preference for delayed rewards regardless of their size or probability",
@@ -912,10 +847,64 @@ const ALL_QUESTIONS = [
     correct: 1,
     difficulty: "hard"
   },
+  {
+    prompt: "What does the Premack Principle explain?",
+    options: [
+      "High probability behaviors can reinforce low probability ones",
+      "Punishment is more effective than reinforcement for changing behavior",
+      "Reinforcement is unnecessary because behavior changes naturally",
+      "Habituation explains why behavior decreases after repeated exposure"
+    ],
+    correct: 0,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What is the overjustification effect?",
+    options: [
+      "Motivation increases when external rewards are consistently provided",
+      "External rewards reduce intrinsic motivation",
+      "Motivation remains unchanged regardless of reward presence",
+      "Learning becomes faster when rewards are introduced"
+    ],
+    correct: 1,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What happens in escape learning?",
+    options: [
+      "A response prevents a stimulus from occurring in the future",
+      "Behavior is strengthened without any aversive conditions present",
+      "An ongoing unpleasant stimulus is stopped",
+      "Stimuli are ignored because they no longer influence behavior"
+    ],
+    correct: 2,
+    difficulty: "easy"
+  },
+  {
+    prompt: "What happens in avoidance learning?",
+    options: [
+      "A response stops a stimulus after it has already started",
+      "A response prevents an unpleasant event from happening",
+      "Behavior increases without any connection to aversive stimuli",
+      "Learning does not occur because the stimulus is never experienced"
+    ],
+    correct: 1,
+    difficulty: "medium"
+  },
+  {
+    prompt: "What is the difference between escape and avoidance?",
+    options: [
+      "Both processes involve stopping a stimulus after it has already begun",
+      "Escape occurs without learning while avoidance depends on learning",
+      "Avoidance relies on punishment while escape relies on reinforcement",
+      "Escape ends a stimulus, avoidance prevents it"
+    ],
+    correct: 3,
+    difficulty: "easy"
+  },
 
   // ==================== UNIT 3 ====================
 
-  // --- Easy ---
   {
     prompt: "What is positive punishment?",
     options: [
@@ -944,13 +933,11 @@ const ALL_QUESTIONS = [
       "It increases behavior rather than reducing it over time",
       "It teaches correct behavior in a clear and consistent way",
       "It only suppresses behavior instead of reversing learning",
-      "It has no measurable effect on behavior at all"
+      "His study suggests punishment has no lasting effect on behavior at all"
     ],
     correct: 2,
     difficulty: "easy"
   },
-
-  // --- Medium ---
   {
     prompt: "What makes punishment more effective?",
     options: [
@@ -976,7 +963,7 @@ const ALL_QUESTIONS = [
   {
     prompt: "What is a major problem with punishment?",
     options: [
-      "It often does not show what behavior should replace the bad one",
+      "It does not teach what behavior should replace the bad one",
       "It removes all learning associated with the punished behavior",
       "It teaches the correct behavior that should replace the unwanted one",
       "It prevents emotional responses from forming during learning"
@@ -996,19 +983,6 @@ const ALL_QUESTIONS = [
     difficulty: "medium"
   },
   {
-    prompt: "Overshadowing occurs when:",
-    options: [
-      "Both cues are learned equally during conditioning trials",
-      "A weaker cue becomes the strongest predictor of the outcome",
-      "A more noticeable cue limits learning about another cue",
-      "No association forms between cues and outcomes"
-    ],
-    correct: 2,
-    difficulty: "medium"
-  },
-
-  // --- Hard ---
-  {
     prompt: "In the Rescorla–Wagner model, learning depends on:",
     options: [
       "The number of times a stimulus is paired with reinforcement",
@@ -1020,6 +994,17 @@ const ALL_QUESTIONS = [
     difficulty: "hard"
   },
   {
+    prompt: "Overshadowing occurs when:",
+    options: [
+      "Both cues are learned equally during conditioning trials",
+      "A weaker cue becomes the strongest predictor of the outcome",
+      "A more noticeable cue limits learning about another cue",
+      "No association forms between cues and outcomes"
+    ],
+    correct: 2,
+    difficulty: "medium"
+  },
+  {
     prompt: "According to the Rescorla–Wagner model, learning stops when:",
     options: [
       "The outcome is fully predicted",
@@ -1028,39 +1013,6 @@ const ALL_QUESTIONS = [
       "The behavioral response gradually decreases over time"
     ],
     correct: 0,
-    difficulty: "hard"
-  },
-  {
-    prompt: "A child behaves well only when a strict parent is present. This illustrates:",
-    options: [
-      "The behavior has been permanently erased by punishment",
-      "No meaningful learning has taken place",
-      "The child is being positively reinforced for good behavior",
-      "The parent has become an S-delta signaling that punishment will not occur when absent"
-    ],
-    correct: 3,
-    difficulty: "hard"
-  },
-  {
-    prompt: "Avoidance behavior persists even when the threat is gone because:",
-    options: [
-      "A reward is provided each time the behavior occurs",
-      "Fear reduction reinforces the avoidance response",
-      "No learning took place during the original conditioning",
-      "Punishment strengthens avoidance over time"
-    ],
-    correct: 1,
-    difficulty: "hard"
-  },
-  {
-    prompt: "Behavior returns after punishment is removed because:",
-    options: [
-      "The behavior was permanently erased from memory",
-      "The behavior was reinforced during the punishment phase",
-      "The behavior was suppressed but never unlearned",
-      "The behavior was forgotten and then reacquired"
-    ],
-    correct: 2,
     difficulty: "hard"
   }
 
